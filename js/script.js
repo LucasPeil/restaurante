@@ -1,5 +1,4 @@
-// Import our custom CSS
-//import '../css/style.scss'
+
 
 
 // Import all of Bootstrap's JS
@@ -186,3 +185,10 @@ const closeMenuModal = ()=>{
       estrelasMenu[index].setAttribute("type", "");
       buttonClicked.pop(botao);
     } */
+
+// Expose functions to global scope for HTML inline handlers
+window.openMenuModal = openMenuModal;
+window.closeMenuModal = closeMenuModal;
+
+// Add scroll event listener instead of inline handler
+window.addEventListener('scroll', headerAnimation);
